@@ -23,29 +23,35 @@
 }
 
 Form {
-  background:lightblue;
+  background:teal;
   display:flex;
   justify-content: space-between;
   flex-direction: column;
-  width:60%;
+  width:50%;
   margin:auto;
+  border-radius:23px;
 }
 Input {
   padding:20px;
   margin:auto;
   margin-top:20px;
+  
 }
 
 .title {
-  background:white;
+  background:teal;
+  border-radius:10px;
   width:50%;
-  margin:auto;
+  margin:100px auto;
+  padding:10px;
 }
 button {
   width:20%;
   margin:auto;
   margin-top:10px;
   margin-bottom:10px;
+  padding:5px;
+  border-radius:2px;
 }
 .Star {
   width:50%;

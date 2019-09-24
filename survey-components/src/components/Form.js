@@ -24,16 +24,18 @@ const Survey =({errors, touched, status}) => {
 
   return (
     <Form>
+    <h3>To better help you get the best sleep, we need to know a couple of things about you. All Data will be kept confidential.</h3>
       {touched.Name && errors.Name && <p>{errors.Name}</p>}
       <Field type="text" name="Name" placeholder="Name" />
       
       {touched.Age && errors.Name && <p>{errors.Age}</p>}
       <Field type="text" name="Age" placeholder="Age" />
 
-      {touched.Gender && errors.Name && <p>{errors.Gender}</p>}
-      <Field type="text" name="Gender" placeholder="Gender" />
+      {touched.Email && errors.Name && <p>{errors.Email}</p>}
+      <Field type="text" name="Email" placeholder="Email" />
 
-      <button>Next</button>
+      <button>Next
+      </button>
     </Form>
   )
 }
@@ -43,13 +45,13 @@ export default withFormik({
     return {
       Name:values.Name || "",
       Age: values.Age || "",
-      Gender: values.Gender || ""
+      Email: values.Email || ""
     }
   },
     validationSchema: yup.object().shape({
       Name: yup.string().required(),
       Age: yup.string().required(),
-      Gender: yup.string().required()
+      Email: yup.string().required()
     }),
     handleSubmit:(values, { setStatus}) => {
        axios

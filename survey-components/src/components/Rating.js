@@ -18,6 +18,7 @@ const Star = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
+    console.log(status);
     axios 
     .post("https://reqres.in/api/users")
       .then(res => {
@@ -31,11 +32,11 @@ const Star = () => {
 
 
   return (
-     <div className ="Star" >
+     <div className ="Star">
        <form  onSubmit={handleSubmit}>
          <h1>Rate Us</h1>
           <Rating emptySymbol="far fa-star fa-2x" fullSymbol="fa fa-star fa-2x" />
-          <input component="textarea" name="name" onChange={handleChange}></input>
+          <input component="textarea" name="name" onChange={handleChange} placeholder="Please Explain your Rating"></input>
           <button>Next</button>
 
        </form>
