@@ -52,9 +52,7 @@ export default withFormik({
       Gender: yup.string().required()
     }),
     handleSubmit:(values, { setStatus}) => {
-        console.log(values)
-
-        axios
+       axios
           .post("https://reqres.in/api/users", values)
             .then(res => {
               setStatus(res.data)
