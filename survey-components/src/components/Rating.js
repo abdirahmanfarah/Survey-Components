@@ -19,24 +19,29 @@ const Star = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log(event.bubbles);
-    // axios 
-    // .post("https://reqres.in/api/users")
-    //   .then(res => {
-    //     setStatus(res.data)
-    //     console.log(res.data)
-    //   })
-    //   .catch((err) => {
-    //     console.log('Error:', err)
-    //   })
+    console.log(status);
+    axios 
+    .post("https://reqres.in/api/users")
+      .then(res => {
+        console.log(res);
+        setStatus(res.data);
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log('Error:', err)
+      })
     }
+  
+    // const rating = event => {
+      
+    // }
 
 
   return (
      <div className ="Star">
        <form  onSubmit={handleSubmit}>
          <h1>Rate Us</h1>
-          <Rating emptySymbol="far fa-star fa-2x" fullSymbol="fa fa-star fa-2x" />
+          <Rating emptySymbol="far fa-star fa-2x" fullSymbol="fa fa-star fa-2x"/>
           <textarea className="feedback" name="notes" onChange={handleChange}  placeholder="Feedback" ></textarea>
           <button>Next</button>
 

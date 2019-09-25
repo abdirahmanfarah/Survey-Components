@@ -41,7 +41,7 @@ const Survey =({errors, touched, status}) => {
 
         <Field component="textarea" type="text" name="Question2" placeholder="What is something that can be better implemented? " />
   
-        <button type="submit">Next
+        <button type="submit">Submit
         </button>
       </Form>
     </div>
