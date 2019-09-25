@@ -1,0 +1,10 @@
+[build]
+base = "survey-components/"
+publish = "survey-components/build/"
+command = "yarn build"
+
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
