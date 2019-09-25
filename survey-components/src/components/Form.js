@@ -4,6 +4,8 @@ import { withFormik, Form, Field } from 'formik';
 import * as yup from 'yup';
 import axios from "axios";
 
+// import { Route, NavLink } from "react-router-dom";
+
 // import styled from 'styled-components';
 
 // const form = styled.form`
@@ -23,20 +25,26 @@ const Survey =({errors, touched, status}) => {
   },[status])
 
   return (
-    <Form>
-    <h3>To better help you get the best sleep, we need to know a couple of things about you. All Data will be kept confidential.</h3>
-      {touched.Name && errors.Name && <p>{errors.Name}</p>}
-      <Field type="text" name="Name" placeholder="Name" />
-      
-      {touched.Age && errors.Name && <p>{errors.Age}</p>}
-      <Field type="text" name="Age" placeholder="Age" />
+    <div className ='form'>
+      <Form>
+      <h3>To help you get the best sleep, we need to know a couple of things about you.</h3>
+        {touched.Name && errors.Name && <p>{errors.Name}</p>}
+        <Field type="text" name="Name" placeholder="Name" />
+        
+        {touched.Age && errors.Name && <p>{errors.Age}</p>}
+        <Field type="text" name="Age" placeholder="Age" />
+  
+        {touched.Email && errors.Name && <p>{errors.Email}</p>}
+        <Field type="text" name="Email" placeholder="Email" />
 
-      {touched.Email && errors.Name && <p>{errors.Email}</p>}
-      <Field type="text" name="Email" placeholder="Email" />
+        <Field component="textarea" type="text" name="Question1" placeholder="What is something you love about using this app?  " />
 
-      <button>Next
-      </button>
-    </Form>
+        <Field component="textarea" type="text" name="Question2" placeholder="What is something that can be better implemented? " />
+  
+        <button type="submit">Next
+        </button>
+      </Form>
+    </div>
   )
 }
 

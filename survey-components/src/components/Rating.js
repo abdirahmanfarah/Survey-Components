@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Rating from "react-rating"
 import axios from "axios"
+
 
 
 const Star = () => {
@@ -8,7 +9,7 @@ const Star = () => {
   const [status, setStatus] = useState([]);
 
   const [newMember, setNewMember] = useState({
-    name: "",
+    notes: "",
     
   });
 
@@ -18,16 +19,16 @@ const Star = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log(status);
-    axios 
-    .post("https://reqres.in/api/users")
-      .then(res => {
-        setStatus(res.data)
-        console.log(res.data)
-      })
-      .catch((err) => {
-        console.log('Error:', err)
-      })
+    console.log(event.bubbles);
+    // axios 
+    // .post("https://reqres.in/api/users")
+    //   .then(res => {
+    //     setStatus(res.data)
+    //     console.log(res.data)
+    //   })
+    //   .catch((err) => {
+    //     console.log('Error:', err)
+    //   })
     }
 
 
@@ -36,7 +37,7 @@ const Star = () => {
        <form  onSubmit={handleSubmit}>
          <h1>Rate Us</h1>
           <Rating emptySymbol="far fa-star fa-2x" fullSymbol="fa fa-star fa-2x" />
-          <input component="textarea" name="name" onChange={handleChange} placeholder="Please Explain your Rating"></input>
+          <textarea className="feedback" name="notes" onChange={handleChange}  placeholder="Feedback" ></textarea>
           <button>Next</button>
 
        </form>
@@ -46,4 +47,6 @@ const Star = () => {
   
 }
 export default Star;
+
+
 
