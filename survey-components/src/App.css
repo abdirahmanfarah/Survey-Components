@@ -40,7 +40,7 @@ Input {
 }
 
 .title {
-  background:teal;
+  /* background:teal; */
   border-radius:10px;
   width:50%;
   margin:100px auto 20px;
