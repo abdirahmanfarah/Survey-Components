@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "name": "survey-Components",
-  "builds": [{ "src": "survey-Components/package.json", "use": "@now/static-build", "config": {"distDir": "build"} }],
+  "name": "survey-components",
+  "builds": [{ "src": "survey-components/package.json", "use": "@now/static-build", "config": {"distDir": "build"} }],
   "routes": [
-      { "src": "/(.*)", "dest": "survey-Components/$1" }
+      { "src": "/(.*)", "dest": "survey-components/$1" }
   ]
 }
