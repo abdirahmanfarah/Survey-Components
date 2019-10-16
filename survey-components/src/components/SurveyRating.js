@@ -31,10 +31,6 @@ const Star = () => {
         console.log('Error:', err)
       })
     }
-  
-    // const rating = event => {
-      
-    // }
 
 
   return (

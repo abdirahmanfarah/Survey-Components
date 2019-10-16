@@ -1,9 +1,9 @@
 import React from 'react';
 
 import './App.css';
-import Survey from './components/Form';
-import Header from './components/Title';
-import Star from './components/Rating'
+import Survey from './components/SurveyForm';
+// import Header from './components/SurveyTitle';
+import Star from './components/SurveyRating'
 
 
 
@@ -12,9 +12,9 @@ function App() {
 
   return (
     <div className="App">
-    <Header />
-    <Star />
+    {/* <Header /> */}
     <Survey />
+    <Star />
     </div>
   );
 }

@@ -25,8 +25,9 @@ const Survey =({errors, touched, status}) => {
   },[status])
 
   return (
-    <div className ='form'>
       <Form>
+        <h1>Hello there!</h1>
+        {/* <p>We have some great ideas for our app but we would love your feedback to help make it better!</p> */}
       <h3>To help you get the best sleep, we need to know a couple of things about you.</h3>
         {touched.Name && errors.Name && <p>{errors.Name}</p>}
         <Field type="text" name="Name" placeholder="Name" />
@@ -44,7 +45,6 @@ const Survey =({errors, touched, status}) => {
         <button type="submit">Submit
         </button>
       </Form>
-    </div>
   )
 }
 
